@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: 'inputNumber',
+    name: 'inputNumber111111',
     data(){
         return{
             num: 0,
