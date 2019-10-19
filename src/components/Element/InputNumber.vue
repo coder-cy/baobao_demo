@@ -11,15 +11,15 @@
 
 <script>
 export default {
-    name: 'inputNumber111111',
-    data(){
-        return{
+    name: 'inputNumber',
+    data() {
+        return {
             num: 0,
             oldNum: 0
         }
     },
-    props:{
-        numStep:{
+    props: {
+        numStep: {
             type: Number,
             default: 1
         }
@@ -88,7 +88,7 @@ export default {
       cursor: pointer;
   }
   .input_number>div>div:hover{
-      background: #dde;
+      background: rgba(255, 85, 0, .1);
       color: #aaa;
   }
   .minus{

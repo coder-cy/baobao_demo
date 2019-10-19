@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import index from '@/components/Index'
 import infoTable from '@/components/InfoTable'
 import elementIndex from '@/components/element/ElementIndex'
+import weibo from '@/components/Weibo'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/elementIndex',
       name: 'elementIndex',
       component: elementIndex
+    },
+    {
+      path: '/weibo',
+      name: 'weibo',
+      component: weibo
     }
   ]
 })

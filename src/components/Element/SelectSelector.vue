@@ -2,7 +2,7 @@
   <div class="select_selector">
       <div>
           <div class='main' @click="isOpen=!isOpen;">
-            <span class='fold_icon' :style="{transform: foldRotate}">^</span>
+            <span class='fold_icon' :style="{transform: foldRotate}"></span>
             <input v-model="myZone" type="text" placeholder="请选择">
           </div>
           <div class='lis' v-show="isOpen">
@@ -68,7 +68,7 @@ export default {
         position: absolute;
         width: 100%;
     }
-    .fold_icon{
+    /* .fold_icon{
         position: absolute;
         color: #bbb;
         top: 15px;
@@ -77,12 +77,44 @@ export default {
         user-select: none;
         cursor: pointer;
         transition: .1s;
+    } */
+    .fold_icon{
+        position: absolute;
+        color: #bbb;
+        /* background: blue; */
+        width: 16px;
+        height: 8px;
+        top: 20px;
+        right: 20px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        user-select: none;
+        cursor: pointer;
+        transition: .1s;
+    }
+    .fold_icon:after {
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 0;
+        height: 0;
+        content: "";
+        border-width: 0 6px 6px 6px;
+        border-style: solid;
+        border-color: white transparent ;
+    }
+    .fold_icon:before {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        content: "";
+        border-width: 0 8px 8px 8px;
+        border-style: solid;
+        border-color: #f50 transparent;
     }
     .tri_icon{
         position: relative;
         left: 15%;
         width: 5px;
-        height: 5px;
         border: 8px solid transparent;
         border-bottom-color: #eee;
     }
@@ -95,6 +127,8 @@ export default {
         background: white;
     }
     li{
+        text-align: left;
+        text-indent: 1em;
         list-style: none;
         padding: 5px 0;
         user-select: none;
