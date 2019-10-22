@@ -12,7 +12,7 @@
 </template>
 
 <script>
- 
+import axios from 'axios';
 export default {
   name: 'App',
   components: {
@@ -26,7 +26,15 @@ export default {
       }else{
         this.$router.back();
       }
+    },
+    axiosTest(){
+      axios.post("http://192.168.0.101:9090/test").then(data => {
+        console.log(data)
+      })
     }
+  },
+  mounted() {
+    this.axiosTest();
   }
 }
 </script>
