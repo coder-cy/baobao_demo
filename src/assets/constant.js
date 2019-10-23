@@ -1,0 +1,2 @@
+export const VALIDATE_ACCOUNT_SUCCESS = 0;
+export const VALIDATE_ACCOUNT_FAILED = 1;
