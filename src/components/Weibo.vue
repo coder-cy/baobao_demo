@@ -24,7 +24,7 @@
               </span>
             </li>
             <li>
-              <button :style="{backgroundColor: loading?'#bbb':'#f50'}" @click="sendWeibo">发布</button>
+              <button :class="loading? 'loading_btn' : 'btn'"  @click="sendWeibo">发布</button>
             </li>
           </ul>
 
@@ -235,13 +235,22 @@ export default {
     margin-left: 1em;
   }
   .kind_area button{
-    width: 4em;
-    line-height: 1em;
+    width: 56px;
+    line-height: 12px;
     height: 22px;
     background: #f50;
     border: none;
     border-radius: 2px;
     color: #fff;
+    font-size: 16px;
+  }
+  li>.loading_btn{
+    cursor: not-allowed;
+    background: #bbb;
+  }
+  .btn{
+    cursor: pointer;
+    background: #f50;
   }
   .layer_menu_list{
     position: absolute;
