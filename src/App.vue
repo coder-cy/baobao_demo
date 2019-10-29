@@ -12,12 +12,9 @@
 </template>
 
 <script>
- 
+
 export default {
   name: 'App',
-  components: {
-    
-  },
   methods: {
     back(){
       if(window.history.length <=1){
@@ -27,6 +24,8 @@ export default {
         this.$router.back();
       }
     }
+  },
+  mounted() {
   }
 }
 </script>

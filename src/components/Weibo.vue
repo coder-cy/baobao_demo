@@ -1,5 +1,6 @@
 <template>
   <div class="weibo">
+    <emoji/>
       <div class="send_weibo">
         <div class="title_area">
           <span>有什么新鲜事想告诉大家?</span>
@@ -61,8 +62,12 @@
 </template>
 
 <script>
+import emoji from './Emoji';
 export default {
     name: 'weibo',
+    components: {
+      emoji
+    },
     data() {
         return {
           kinds: [
@@ -194,6 +199,8 @@ export default {
   }
   .content{
     padding: 5px;
+    max-height: 300px;
+    overflow: auto;
   }
   .content>li{
     /* margin-top: 20px; */
@@ -221,6 +228,9 @@ export default {
   }
   .kinds>li{
     margin: 5px;
+  }
+  .kinds>li:hover{
+      color: #f50;
   }
   .kind_icon{
     position: absolute;

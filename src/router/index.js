@@ -5,6 +5,7 @@ import infoTable from '@/components/InfoTable'
 import elementIndex from '@/components/element/ElementIndex'
 import weibo from '@/components/Weibo'
 import weiboTest from '@/components/WeiboTest'
+import login from '@/components/Login'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/weiboTest',
       name: 'weiboTest',
       component: weiboTest
+    },
+    {
+      path: '/weibo/login',
+      name: 'login',
+      component: login
     }
   ]
 })
