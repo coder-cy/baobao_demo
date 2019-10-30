@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 创建axios实例
 const axiosInstance = axios.create({
-  baseURL: 'http://192.168.0.101:9090/tutu'
+  baseURL: 'http://192.168.0.104:9090/tutu'
 })
 
 const postMethod = (path, param) => {

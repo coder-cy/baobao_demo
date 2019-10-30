@@ -64,7 +64,14 @@ export default {
             }
         }
     },
+    mounted() {
+        this.$store.commit("setAAAAAAA", "ssss");
+        console.log(this.aaaaaa);
+    },
     computed: {
+        aaaaaa() {
+            return this.$store.state.aaaaaa;
+        }
     },
     methods: {
         loginIn() {
