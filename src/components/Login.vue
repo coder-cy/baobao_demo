@@ -65,8 +65,9 @@ export default {
         }
     },
     mounted() {
-        this.$store.commit("setAAAAAAA", "ssss");
-        console.log(this.aaaaaa);
+        // this.$store.commit("setAAAAAAA", "ssss");
+        // console.log(this.aaaaaa);
+        this.$store.dispatch("saveUserName", "hahaha");
     },
     computed: {
         aaaaaa() {
